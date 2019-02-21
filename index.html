@@ -1,0 +1,10 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+<script>
+var b = new Date();
+$.getJSON("http://localhost/json.php?callback=?", function(data){
+var a = new Date();
+document.write("|Client-"+a.getUTCHours()+":"+a.getUTCMinutes()+":"+a.getUTCSeconds()+":"+a.getUTCMilliseconds()+"|    Server-"+data.time);
+  var c = a - b;
+document.write("|delay-"+c);
+});
+</script>
